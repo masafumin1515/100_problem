@@ -17,7 +17,7 @@ def main():
         
         if (list[0] in num_set and list[1] in num_set):
             area.append(pow(b[0]-a[0], 2)+pow(b[1]-a[1], 2))
-
+    
     print(num_set)
     print(area)
 
