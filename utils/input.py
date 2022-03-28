@@ -15,5 +15,5 @@ L = [int(input()) for i in range(N)]
 A = list(map(int, input().split()))
 
 # 整数 (縦 H 横 W の行列)
-S = [*map(int, input().split())) for i in range(H)]
+S = [*map(int, input().split()) for i in range(H)]
 
