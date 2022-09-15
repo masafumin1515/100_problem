@@ -20,7 +20,7 @@ int main() {
 	for (int i = 0; i < (1 << R); i++) { // 全ての行の組み合わせに対して
 		int sum = 0;
 		for (int j = 0; j < C; j++) {
-			int tmp = __builtin_popcount(a[j] ^ i); // 
+			int tmp = __builtin_popcount(a[j] ^ i); // ? i乗?
 			sum += max(tmp, R - tmp);
 		}
 		ans = max(ans, sum);

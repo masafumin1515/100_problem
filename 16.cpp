@@ -10,29 +10,30 @@ typedef long long ll; const int inf = INT_MAX / 2; const ll infl = 1LL << 60;
 template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
 
-int N, X[8], Y[8];
+int N, P[8], Q[8];
 void _main() {
   cin >> N;
-  rep(i, 0, N) cin >> X[i] >> Y[i]; // i個目の(X, Y)座標
+  rep(i, 0, N) cin >> P[i];
+  rep(i, 0, N) cin >> Q[i]; 
 
   vector<int> ord;
-  rep(i, 0, N) ord.push_back(i); // 0~N-1までの配列
+  rep(i, 0, N) ord.push_back(i + 1); // 0~N-1までの配列
 
-  long double sm = 0;
-  // ord に順列が入れ替わり代入されていくループ
+  int a = 0, b = 0;
+  int idx = 1;
   do {
-    // ord順に経路計算
-    rep(i, 0, N - 1) {
-      int a = ord[i];
-      int b = ord[i + 1];
+    // ord と P, Q の値が等しい時、a,bにidxを代入
+    bool ok = true;
+    rep(i, 0, N) if (ord[i] != P[i]) ok = false;
+    if (ok) a = idx;
 
-      long double dx = X[a] - X[b];
-      long double dy = Y[a] - Y[b];
+    ok = true;
+    rep(i, 0, N) if (ord[i] != Q[i]) ok = false;
+    if (ok) b = idx;
 
-      sm += sqrt(dx * dx + dy * dy);
-    }
-  } while (next_permutation(all(ord))); // next_permutation は配列またはコンテナクラスの範囲 [first, last) を引数で受け取る
+    idx++;
+  } while (next_permutation(all(ord)));
 
-  rep(i, 0, N) sm /= (i + 1);
-  printf("%.10Lf\n", sm);
+  int ans = abs(a-b);
+  cout << ans << endl;
 }
