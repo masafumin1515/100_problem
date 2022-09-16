@@ -46,6 +46,14 @@
 
 # 2-1. 二分探索
 
+- [x] 4_B - 二分探索
+      binary_search で true を返したらカウントをインクリメントして数えた。以前なら map で問いてたな。
+- [ ] JOI 2009 本選 2 - ピザ
+- [ ] AtCoder Beginner Contest 077 C - Snuke Festival
+- [ ] AtCoder Beginner Contest 023 D - 射撃王
+- [ ] AtCoder Regular Contest 054 B - ムーアの法則
+- [ ] JOI 2008 本選 3 - ダーツ
+
 # 2-2. 深さ優先探索
 
 # 2-3. 幅優先探索
