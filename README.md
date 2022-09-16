@@ -50,9 +50,10 @@
       binary_search で true を返したらカウントをインクリメントして数えた。以前なら map で問いてたな。
 - [x] JOI 2009 本選 2 - ピザ
       lower_bound で宅配先から近い店舗を探す。店舗の配列の先頭だけでなく、末尾にも本店を追加することで、アルゴリズムが簡単になる。19 行目が肝。
-- [ ] AtCoder Beginner Contest 077 C - Snuke Festival
+- [x] AtCoder Beginner Contest 077 C - Snuke Festival
       下の段より上の段のパーツが真に小さいパーツでできる祭壇が、何種類あるかを求める問題。下段を全探索したせいで、中段も一部全探索することになる。計算量が O(N^2(logN)^2)（？）になってしまった。中段を全探索することで、下段・上段は二部探索するのみで済み、計算量が O(NlogN)に。
 - [ ] AtCoder Beginner Contest 023 D - 射撃王
+      「整数 x が与えられた時に、最小のペナルティを x 以下にすることができるか」という判定問題。高さを二部探索。超いい問題。
 - [ ] AtCoder Regular Contest 054 B - ムーアの法則
 - [ ] JOI 2008 本選 3 - ダーツ
 
