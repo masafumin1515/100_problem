@@ -48,7 +48,8 @@
 
 - [x] 4_B - 二分探索
       binary_search で true を返したらカウントをインクリメントして数えた。以前なら map で問いてたな。
-- [ ] JOI 2009 本選 2 - ピザ
+- [x] JOI 2009 本選 2 - ピザ
+      lower_bound で宅配先から近い店舗を探す。店舗の配列の先頭だけでなく、末尾にも本店を追加することで、アルゴリズムが簡単になる。19 行目が肝。
 - [ ] AtCoder Beginner Contest 077 C - Snuke Festival
 - [ ] AtCoder Beginner Contest 023 D - 射撃王
 - [ ] AtCoder Regular Contest 054 B - ムーアの法則
