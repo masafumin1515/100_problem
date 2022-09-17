@@ -4,6 +4,7 @@
     "ios": "cpp",
     "iostream": "cpp",
     "random": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "iomanip": "cpp"
   }
 }
