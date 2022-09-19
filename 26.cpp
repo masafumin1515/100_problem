@@ -22,7 +22,7 @@ void _main() {
     int a, b;
     cin >> a >> b;
     v[a].push_back(b);
-    v[b].push_back(a); // これの意味はわからなかった。
+    v[b].push_back(a); // これの意味はわからなかった。->追記: 無効グラフが関係しているみたい。この実装に手を加えたもの（全てこれを少し改変したら解けるらしい）。https://qiita.com/drken/items/4a7869c5e304883f539b#-1-%E3%81%A4%E3%81%A5%E3%81%8F
   }
 
   rep(i, 0, Q) {
