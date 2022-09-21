@@ -134,7 +134,7 @@
 
   問題文（入力）がよくわからない！実装も重い！とりあえず先に進む。
 
-- [ ] 33 AtCoder Beginner Contest 088 D - Grid Repainting
+- [x] 33 AtCoder Beginner Contest 088 D - Grid Repainting
 
   ゴールまでの最短ステップをまず求める。~~そこから最短経路を逆に求める。field のうち、最短経路のセルを別の文字に置き換える。~~ -> 最短ステップ数が分かれば、(field の'.'の数 - 最短ステップ数 -1)が答えになる。
 
