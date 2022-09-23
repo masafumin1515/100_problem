@@ -16,7 +16,6 @@ void _main() {
   vector<int> value(N), weight(N);
   rep(i, 0, N) cin >> value[i] >> weight[i];
 
-  // DPテーブルの定義 dp[i+1][j] := i番目までの品物のうちいくつかを選び、重さがjになる組み合わせのうち、価値が最大になる組み合わせの価値
   int dp[110][10010];
 
   // DPテーブルの初期条件 0番目までの品物を選んだ時の価値はゼロ
@@ -25,13 +24,11 @@ void _main() {
   // DP漸化式 
   rep(i, 0, N) {
     rep(w, 0, W+1) {
-      if (w >= weight[i]) dp[i+1][w] = max(dp[i][w-weight[i]] + value[i], dp[i][w]);
-      else dp[i+1][w] = dp[i][w];
-      // dp[i+1][w] = dp[i][w];
-      // if (w >= weight[i]) dp[i+1][w] = max(dp[i][w-weight[i]] + value[i], dp[i][w]);
+      if(w-weight[i]>=0) dp[i+1][w] = max( dp[i+1][w-weight[i]]+value[i], dp[i][w] ); // 右辺のdp[i+1]がポイント。i -> i+1 にすることで、複数個の選択に対応している
+			else dp[i+1][w] = dp[i][w];
     }
   }
 
   // 出力
-  cout << dp[N][W] << endl;
+  cout << dp[N][W] <<endl;
 }
