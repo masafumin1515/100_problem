@@ -18,6 +18,7 @@ void _main() {
 
   vector<int> ord;
   rep(i, 0, N) ord.push_back(i + 1); // 0~N-1までの配列
+  // 昇順になっているのがポイント。next_permutationでは[first, last)にもとづいて次の順列が渡される
 
   int a = 0, b = 0;
   int idx = 1;
