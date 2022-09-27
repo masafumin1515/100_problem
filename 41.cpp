@@ -21,32 +21,33 @@ void _main() {
   vector<vector<int> > dp(D+1, vector<int>(N));
   
   // dpテーブル初期化: 
-  // 0日目には服を選ばない（服を0個選ぶ）ので、0 最大値問題なのでそれ以外は-1
-  rep(i, 0, N) dp[0][i] = 0, dp[1][i] = C[i];
+  // -1日目には服を選ばないので0, 最大値問題なのでそれ以外は-1
+  rep(j, 0, N) {
+    dp[0][j] = 0;
+    if (A[j] <= T[0] && T[0] <= B[j]) dp[1][j] = 0;
+    else dp[1][j] = -1;
+  }
   rep(i, 2, D+1) rep(j, 0, N) dp[i][j] = -1;
 
   // DP漸化式
-  rep(i, 0, D) { 
+  rep(i, 1, D) { 
     rep(j, 0, N) {
-      if (A[j] <= T[i] && T[i] << B[j]) {
+      if (A[j] <= T[i] && T[i] <= B[j]) {
+        // dp[i][k]: i-1日目にk番目の服を着た時の、i-1日目までの派手さ
+        // abs(C[j] - C[k]): i-1日目にはk, i日目にはjを着た時の派手さ
         rep(k, 0, N) {
-          int x = abs(C[j] - C[k]) + dp[i][j];
-          dp[i+1][j] = max(dp[i+1][j], x);
+          if (dp[i][k] != -1) {
+            int x = abs(C[j] - C[k]) + dp[i][k];
+            dp[i+1][j] = max(dp[i+1][j], x);
+          }
         }
       }
     }
   }
-
-  rep(i, 0, D+1) {
-    rep(j, 0, N) {
-      cout << dp[i][j] << ' ';
-    }
-    cout << endl;
-  }
   
   // 出力
-  // int ans = -1;
-  // rep(i, 0, N) ans = max(ans, dp[D][i]);
+  int ans = -1;
+  rep(i, 0, N) ans = max(ans, dp[D][i]);
 
-  // cout << ans << endl;
+  cout << ans << endl;
 }
