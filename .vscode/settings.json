@@ -90,5 +90,6 @@
     "iterator": "cpp",
     "utility": "cpp",
     "filesystem": "cpp"
-  }
+  },
+  "cSpell.words": ["chmax", "rrep"]
 }
