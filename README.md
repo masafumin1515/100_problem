@@ -175,14 +175,23 @@
 
 - [ ] 46 ALDS_10_B - 連鎖行列積
 
-  時間切れ、一旦先に進む。参考サイト: [こちら](https://ttrsq.exblog.jp/24318687/)
+  時間切れ、一旦先に進む。添字の意味がややこしい。参考サイト: [こちら](https://ttrsq.exblog.jp/24318687/)
 
 - [ ] 47 JOI 2015 本選 2 - ケーキの切り分け 2
 - [ ] 48 AOJ 1611 ダルマ落とし
 
 # 3-3. 動的計画法：bit DP
 
+- [ ] 49 DPL_2_A - 巡回セールスマン問題
+- [ ] 50 Square869120Contest #1 G - Revenge of Traveling Salesman Problem
+- [ ] 51 JOI 2014 予選 4 - 部活のスケジュール表
+- [ ] 52 JOI 2017 予選 4 - ぬいぐるみの整理
+
 # 3-4. 動的計画法：その他
+
+- [ ] 53 DPL_1_D - 最長増加部分列
+- [ ] 54 AtCoder Beginner Contest 006 D - トランプ挿入ソート
+- [ ] 55 AtCoder Beginner Contest 134 E - Sequence Decomposing
 
 # 4-1. 最短経路問題：ダイクストラ法
 
